@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body,html{
+            width:100vw;
+            height:100%;
+            overflow-x:hidden;
+        }
+        img{
+            /* object-fit:contain; */
+            height:100%;
+            width: 100%;
+            position:absolute;
+            z-index:1;
+        }
+        .overlay{
+            background-color: #0b122566;
+            position:absolute;
+            z-index:2;
+            width:100%;
+            height: 100%;
+        }
+        .quote-generator{
+            height:100%;
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            gap:8%;
+            align-items:center;
+            position:absolute;
+            z-index:3;
+            /* padding:10%; */
+        }
+        .qg-1{
+            height:40%;
+            width: 35%;
+            /* position:absolute; */
+            /* z-index:2; */
+            color:white;
+            text-align:center;
+            /* background: #000; */
+             display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:8%;
+        }
+        .qg-1 h1{
+            font-size:38px;
+            font-weight:500
+        }
+        .qg-1 h4{
+            color:#03c3c3;
+            font-size:18px;
+            font-weight:450;
+        }
+        .qg-2{
+             width: 35%;
+             height:37%;
+            /* position:absolute; */
+            /* z-index:2; */
+            color:black;
+            text-align:center;
+            background: white;
+            border-radius:30px;
+            border:1px solid #03c3c3;
+            box-shadow:1px 1px 10px 1.5px 	 #03c3c3;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:10%;
+            padding:1.5%;
+        }
+        .qg-2 h2{
+            width:80%;
+            /* background: #000; */
+            border-bottom:3px solid  #03c3c3;
+            font-size:30px;
+            text-align: center;
+             color:#012b87;
+        }
+       #quote{
+        font-size:18px;
+        font-weight:450;
+         color:#012b87;
+       }
+       #author{
+           font-size:14px;
+           /* color:rgb(166, 165, 165); */
+            color:#03c3c3;
+           font-weight:450;
+           /* text-align: right;   */
+           /* margin-left: 70%; */
+       }
+       #btn{
+        padding:2% 5%;
+        margin-left:60%;
+        border-radius:30px;
+        border:3px solid #03c3c3;
+        background-color: #012b87;
+        /* font-weigh; */
+        font-size: 14px;
+        color:white;
+       }
+       #btn:hover{
+        background-color: #03c3c3;
+        border:3px solid #012b87 ;
+        color:white;
+        cursor:pointer;
+       }
+       @media(max-width:1200px) {
+        .qg-1 h1{
+            font-size:32px;
+        }
+        .qg-1 h4{
+            font-size:15px;
+        }
+        .qg-2 h2{
+            font-size:26px;
+        }
+       #quote{
+        font-size:15px;
+       }
+       #author{
+           font-size:13px;
+       }
+       #btn{
+        font-size: 12px;
+       }
+       }
+        @media(max-width:992px) {
+        .qg-1 h1{
+            font-size:26px;
+        }
+        .qg-1 h4{
+            font-size:12px;
+        }
+        .qg-2{
+            height:32%;
+        }
+        .qg-2 h2{
+            font-size:22px;
+        }
+       #quote{
+        font-size:12px;
+       }
+       #author{
+           font-size:12px;
+       }
+       #btn{
+        font-size: 9px;
+       }
+       }
+       @media(max-width:768px) {
+        .quote-generator{
+            flex-direction: column;
+            gap:25%;
+            padding:10%;
+        }
+        .qg-1{
+            width: 100%;
+            height: 20%;
+        }
+        .qg-2{
+            width: 100%;
+            height: 45%;
+        }
+        .qg-1 h1{
+            font-size:32px;
+        }
+        .qg-1 h4{
+            font-size:15px;
+        }
+        .qg-2 h2{
+            font-size:26px;
+        }
+       #quote{
+        font-size:15px;
+       }
+       #author{
+           font-size:13px;
+       }
+       #btn{
+        font-size: 12px;
+       }
+       }
+    </style>
+</head>
+<body>
+    <img src="https://static.vecteezy.com/system/resources/previews/001/987/748/non_2x/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg" alt="">
+    <div class="overlay"></div>
+    <div class="quote-generator">
+        <div class="qg-1">
+            <h1>RANDOM QUOTE GENERATOR</h1>
+            <h4>Quotes that inspire, motivate, and make you think...</h4>
+        </div>
+        <div class="qg-2">
+            <h2 class="head">RANDOM QUOTE</h2>
+             <h4 id="quote">A little inspiration is one click away…</h4>
+            <h6 id="author"><i>— Author Name —</i></h6>
+            <button id="btn">Generate Quote</button>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
